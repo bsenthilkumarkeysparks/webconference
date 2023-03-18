@@ -1,0 +1,35 @@
+
+.meeting-box{
+  text-align:center;
+font-size:200%;
+border: 2px solid black;
+padding: 20px;
+margin-top: 10vh;
+width: fit-content;
+max-width: fit-content !important;
+margin: auto;
+border-radius: 20%;
+}
+.btn{
+  border-radius:20px;
+}
+.container-fluid{
+  padding: 9px;
+         color:black;
+       background-color: whitesmoke;
+      font-size: 200%;
+      text-align: center;
+}
+input{
+  border-radius: 20px;
+  border-width: 3px;
+  
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .container-fluid, .btn, .center {
+    width: 100%; 
+  }
+}
