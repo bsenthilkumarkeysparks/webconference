@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+  padding: 9px;
+         color:black;
+       background-color: whitesmoke;
+      font-size: 200%;
+      text-align: center;
+}
+.row{
+  text-align: center;
+
+}
+
+
+/* Style for the container */
+/* Style for the container */
+.overall-users {
+  padding: 20px;
+}
+
+/* Style for the user columns */
+.user-1,
+.user-2,
+.user-3,
+.user-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  max-width: 20% !important;
+  background-color: rgb(216, 211, 211);
+  border: 2px solid black;
+  border-radius: 23px;
+  margin-bottom: 20px;
+}
+.user-1, .user-3{
+  margin-left: auto;
+  margin-right: 40px;
+}
+.user-2, .user-4{
+  margin-right: auto;
+  margin-left: 40px;
+}
+/* Style for the user images */
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+.icon-border-1,
+.icon-border-2,
+.icon-border-3,
+.icon-border-4{
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: xx-large;
+  width: fit-content;
+  max-width: fit-content !important;
+  margin-right: 5px;
+  margin: auto;
+  background-color: rgb(216, 211, 211);
+}
+
+
+
+.account{
+  position: absolute;
+  left:213vh ;
+}
+
+
+.account{
+  position: absolute;
+  left:86% ;
+}
+
+.img-fluid{
+  position: absolute;
+  left: 5%;
+  margin-top: 2%;
+}
+
+
