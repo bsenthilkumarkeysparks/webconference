@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam App</title>
+</head>
+<body>
+    <video id="video"></video>
+    <canvas id="canvas"></canvas>
+    <button type="button" onclick="snap()";>Snap</button>
+
+    <script type="text/javascript">
+
+        var video = document.getElementById('video');
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.oGetUserMedia || navigator.msGetUserMedia;
+        navigator.getUserMedia({ video:true }, webcamFeed, showError);
+
+        function webcamFeed(stream){
+             video.srcObject = stream;
+             video.play();
+
+        };
+
+        function showError(e){
+           alert(a.name);
+        }
+         
+        function snap(){
+            canvas.width = video.clientWidth;
+            canvas.height = video.clientHeight;
+            context.drawImage(video, 0, 0);
+        };
+
+    </script>
+</body>
+</html>
