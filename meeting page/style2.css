@@ -30,7 +30,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 250px;
   max-width: 20% !important;
   background-color: rgb(216, 211, 211);
   border: 2px solid black;
@@ -85,7 +85,6 @@ img {
   left: 5%;
   margin-top: 2%;
 }
-
 
 video{
   width: 80%;

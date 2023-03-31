@@ -27,51 +27,51 @@
 
     <div class="container-fluid header">
         <div class="row">
-           <div class="col-2">
-               <img class="btn img-fluid" src="toggle.jpg" width="15%" height="50%">
-           </div>
-           <div class="col-8">
-               <div> PROCTORED WEB CONFERENCE </div>
-           </div>
-           <div class="col-2">
-               <i class="bi bi-person-circle account"></i>
-           </div>
+            <div class="col-2">
+                <img class="btn img-fluid" src="toggle.jpg" width="15%" height="50%">
+            </div>
+            <div class="col-8">
+                <div> PROCTORED WEB CONFERENCE </div>
+            </div>
+            <div class="col-2">
+                <i class="bi bi-person-circle account"></i>
+            </div>
         </div>
-   </div>
+    </div>
     <br><br><br>
 
     <div class="container-fluid overall-users">
         <div class="row">
-          <div class="col-lg-6 col-6 user-1">
-            <div class="webcam">
-                <video id="video"></video>
-                <canvas id="canvas"></canvas>
+            <div class="col-lg-6 col-6 user-1">
+                <div>
+                    <video id="video1"></video>
+                    <canvas id="canvas1"></canvas>
+                </div>
             </div>
-            
-          </div>
-          <div class="col-lg-6 col-6 user-2">
-            <div class="webcam">
-                <video id="video"></video>
-                <canvas id="canvas"></canvas>
+
+            <div class="col-lg-6 col-6 user-2">
+                <div>
+                    <video id="video2"></video>
+                    <canvas id="canvas2"></canvas>
+                </div>
             </div>
-          </div>
         </div>
         <div class="row">
-          <div class="col-lg-6 col-6 user-3">
-            <div class="webcam">
-                <video id="video"></video>
-                <canvas id="canvas"></canvas>
+            <div class="col-lg-6 col-6 user-3">
+                <div>
+                    <video id="video3"></video>
+                    <canvas id="canvas3"></canvas>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-6 col-6 user-4">
-            <div class="webcam">
-                <video id="video"></video>
-                <canvas id="canvas"></canvas>
+            <div class="col-lg-6 col-6 user-4">
+                <div>
+                    <video id="video4"></video>
+                    <canvas id="canvas4"></canvas>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      
+    </div>
+
     <br>
 
 
@@ -99,35 +99,85 @@
     </div>
 
     <script type="text/javascript">
+        var video1 = document.getElementById('video1');
+        var canvas1 = document.getElementById('canvas1');
+        var context1 = canvas1.getContext('2d');
 
-        var video = document.getElementById('video');
-        var canvas = document.getElementById('canvas');
-        var context = canvas.getContext('2d');
-        
+        var video2 = document.getElementById('video2');
+        var canvas2 = document.getElementById('canvas2');
+        var context2 = canvas2.getContext('2d');
+
+        var video3 = document.getElementById('video3');
+        var canvas3 = document.getElementById('canvas3');
+        var context3 = canvas3.getContext('2d');
+
+        var video4 = document.getElementById('video4');
+        var canvas4 = document.getElementById('canvas4');
+        var context4 = canvas4.getContext('2d');
+
         navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.oGetUserMedia || navigator.msGetUserMedia;
-        navigator.getUserMedia({ video:true }, webcamFeed, showError);
+        navigator.getUserMedia({ video: true }, webcamFeed1, showError1);
+        navigator.getUserMedia({ video: true }, webcamFeed2, showError2);
+        navigator.getUserMedia({ video: true }, webcamFeed3, showError3);
+        navigator.getUserMedia({ video: true }, webcamFeed4, showError4);
 
-        function webcamFeed(stream){
-             video.srcObject = stream;
-             video.play();
-
+        function webcamFeed1(stream) {
+            video1.srcObject = stream;
+            video1.play();
         };
 
-        function showError(e){
-           alert(a.name);
+        function webcamFeed2(stream) {
+            video2.srcObject = stream;
+            video2.play();
+        };
+
+        function webcamFeed3(stream) {
+            video3.srcObject = stream;
+            video3.play();
+        };
+
+        function webcamFeed4(stream) {
+            video4.srcObject = stream;
+            video4.play();
+        };
+
+        function showError1(e) {
+            alert(e.name);
         }
-         
-        function snap(){
-            canvas.width = video.clientWidth;
-            canvas.height = video.clientHeight;
-            context.drawImage(video, 0, 0);
+
+        function showError2(e) {
+            alert(e.name);
+        }
+
+        function showError3(e) {
+            alert(e.name);
+        }
+
+        function showError4(e) {
+            alert(e.name);
+        }
+
+        function snap1() {
+            canvas1.width = video1.clientWidth;
+            canvas1.height = video1.clientHeight;
+            context1.drawImage(video1, 0, 0);
         };
 
+        function snap2() {
+            canvas2.width = video2.clientWidth;
+            canvas2.height = video2.clientHeight;
+            context2.drawImage(video2, 0, 0);
+        };
+
+        function snap3() {
+            canvas3.width = video3.clientWidth;
+            canvas3.height = video3.clientHeight;
+            context3.drawImage(video3, 0, 0);
+        };
+
+        function snap4() {
+            canvas4.width = video4.clientWidth;
+            canvas4.height = video4.clientHeight;
+            context4.drawImage(video4, 0, 0);
+        };
     </script>
-
-
-
-
-</body>
-
-</html>
